@@ -1,5 +1,5 @@
-import unittest, random, string
-from check_pwd import *
+import unittest
+from check_pwd import check_pwd
 
 
 class TestClass(unittest.TestCase):
@@ -32,13 +32,6 @@ class TestClass(unittest.TestCase):
     def test_06(self):
         a = 'SummerIsS00n!'
         self.assertTrue(check_pwd(a))
-
-    # Random test
-    def test_07(self):
-        r = ''.join([random.choice(string.ascii_lowercase + string.ascii_uppercase + string.digits + '~`!@#$%^&*()_+-=')
-                     for n in range(8, 21)])
-        print(r)
-        self.assertTrue(check_pwd(r))
 
 
 if __name__ == '__main__':
